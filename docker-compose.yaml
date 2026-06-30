@@ -22,7 +22,9 @@ services:
     image: evoapicloud/evolution-manager:latest
     restart: always
     ports:
-      - "3000:80"
+      - "8081:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
     networks:
       - evolution-net
 
